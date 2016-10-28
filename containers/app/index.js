@@ -1,17 +1,9 @@
 import angular from 'angular';
+import AppDirective from './app.directive';
+import AppRoutes from './app.routes';
 
-function app() {
-  return {
-    restrict: 'E',
-    controllerAs: 'app',
-    controller: AppController,
-    template: require('./app.html'),
-    scope: {}
-  };
-}
-
-
-export default angular.module('async.app', [])
-  .directive('ngrAsync', app)
+export default angular.module('async.containers.app', [])
+  .config(AppRoutes)
+  .directive('ngrAsync', AppDirective)
   .name;
 

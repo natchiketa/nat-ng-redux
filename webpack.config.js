@@ -22,7 +22,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['angular-hmr', 'babel'],
+      loaders: ['angular-hmr', 'babel?presets[]=es2015'],
       exclude: /node_modules/,
     },
     {

@@ -17,4 +17,9 @@ angular.module('async', [ngRedux, uiRouter, components, asyncApp])
       [window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()] // Enhancers
     );
   })
+  .config(function($urlRouterProvider, $locationProvider) {
+    "ngInject";
+    $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode(true);
+  })
   .service('AsyncActions', asyncService)

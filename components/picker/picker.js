@@ -15,7 +15,7 @@ function picker() {
   };
 }
 
-class PickerController {
+function PickerController() {
 }
 
 export default angular.module('async.components.picker', [])

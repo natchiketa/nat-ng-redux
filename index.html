@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <base href="/" />
     <title>{%= o.htmlWebpackPlugin.options.title %}</title>
   </head>
   <body>
     <div ng-app="async">
-      <ngr-async></ngr-async>
+      <div ui-view></div>
     </div>
   </body>
 </html>
