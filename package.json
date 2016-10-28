@@ -1,19 +1,27 @@
 {
-  "name": "ng-redux-async-example",
-  "version": "0.0.0",
-  "description": "ng-redux async example",
+  "name": "nat-ng-redux",
+  "version": "0.1.0",
+  "description": "Boilerplate for an Angular 1 project using Redux, in ES6 with webpack",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot --inline"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wbuchwalter/ngRedux.git"
+    "url": "git+https://github.com/natchiketa/nat-ng-redux.git"
   },
+  "keywords": [
+    "angularjs",
+    "ng-redux",
+    "webpack",
+    "es6"
+  ],
+  "author": "Sal Lara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wbuchwalter/ngRedux/issues"
+    "url": "https://github.com/natchiketa/nat-ng-redux/issues"
   },
-  "homepage": "https://github.com/wbuchwalter/ngRedux#readme",
+  "homepage": "https://github.com/natchiketa/nat-ng-redux#readme",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
