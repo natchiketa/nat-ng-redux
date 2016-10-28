@@ -1,16 +1,4 @@
-import angular from 'angular';
-
-function app() {
-  return {
-    restrict: 'E',
-    controllerAs: 'app',
-    controller: AppController,
-    template: require('./app.html'),
-    scope: {}
-  };
-}
-
-class AppController {
+export default class AppController {
   constructor($ngRedux, $scope, AsyncActions) {
     const unsubscribe = $ngRedux.connect(this.mapStateToThis, AsyncActions)((selectedState, actions) => {
       this.componentWillReceiveStateAndActions(selectedState, actions);
@@ -59,6 +47,3 @@ class AppController {
   }
 }
 
-export default angular.module('async.app', [])
-  .directive('ngrAsync', app)
-  .name;

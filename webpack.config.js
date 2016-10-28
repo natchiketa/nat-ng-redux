@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: [
     './index.js'
   ],
@@ -22,7 +22,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['angular-hmr', 'babel'],
       exclude: /node_modules/,
     },
     {

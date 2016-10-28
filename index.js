@@ -5,11 +5,11 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from './reducers';
 import asyncService from './actions/asyncService';
-import app from './containers/app';
-import picker from './components/picker';
-import posts from './components/posts';
+import asyncApp from './containers/app';
+import components from './components';
+import uiRouter from "angular-ui-router";
 
-angular.module('async', [ngRedux])
+angular.module('async', [ngRedux, uiRouter, components, asyncApp])
   .config(($ngReduxProvider) => {
     $ngReduxProvider.createStoreWith(
       rootReducer,
@@ -18,6 +18,3 @@ angular.module('async', [ngRedux])
     );
   })
   .service('AsyncActions', asyncService)
-  .directive('ngrAsync', app)
-  .directive('ngrPicker', picker)
-  .directive('ngrPosts', posts);

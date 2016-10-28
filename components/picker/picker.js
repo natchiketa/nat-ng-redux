@@ -1,4 +1,6 @@
-export default function picker() {
+import angular from 'angular';
+
+function picker() {
   return {
     restrict: 'E',
     controllerAs: 'picker',
@@ -15,3 +17,7 @@ export default function picker() {
 
 class PickerController {
 }
+
+export default angular.module('async.components.picker', [])
+  .directive('ngrPicker', picker)
+  .name;

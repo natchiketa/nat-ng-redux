@@ -1,4 +1,6 @@
-export default function posts() {
+import angular from 'angular';
+
+function posts() {
   return {
     restrict: 'E',
     controllerAs: 'posts',
@@ -13,3 +15,7 @@ export default function posts() {
 
 class PostsController {
 }
+
+export default angular.module('async.components.posts', [])
+  .directive('ngrPosts', posts)
+  .name;
