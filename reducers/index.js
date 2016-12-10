@@ -3,6 +3,7 @@ import {
   SELECT_REDDIT, INVALIDATE_REDDIT,
   REQUEST_POSTS, RECEIVE_POSTS
 } from '../constants/ActionTypes';
+import {router} from 'redux-ui-router';
 
 function selectedReddit(state = 'angularjs', action) {
   switch (action.type) {
@@ -55,7 +56,8 @@ function postsByReddit(state = { }, action) {
 
 const rootReducer = combineReducers({
   postsByReddit,
-  selectedReddit
+  selectedReddit,
+  router
 });
 
 export default rootReducer;

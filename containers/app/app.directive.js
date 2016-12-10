@@ -1,5 +1,3 @@
-// import AppController from './app.controller';
-
 function AppController($ngRedux, $scope, AsyncActions) {
   'ngInject';
 

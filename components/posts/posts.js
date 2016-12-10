@@ -1,6 +1,8 @@
 import angular from 'angular';
 import template from './posts.html';
 
+import './posts.scss';
+
 function PostsController() {
 }
 
